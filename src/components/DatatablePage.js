@@ -84,19 +84,19 @@ const DatatablePage = () => {
       var res_peril;
       var res_ponte;
 
-      if(item.peril==true){
+      if(item.peril===true){
         res_peril = <CgDanger id="peril"></CgDanger>
       }
-      if(item.accouplement!="false"){
+      if(item.accouplement!=="false"){
         res_accouplement = <button onClick={ () => handle_accouplement(item.key) }><GiDoubleFish id="accouplement"></GiDoubleFish></button>
       }
-      if(item.mort!="false"){
+      if(item.mort!=="false"){
         res_mort = <button onClick={ () => handle_mort(item.key) } ><GiFishbone id="mort"></GiFishbone></button>
       }
-      if(item.souffrance!="false"){
+      if(item.souffrance!=="false"){
         res_souffrance = <button onClick={ () => handle_souffrance(item.key) } ><MdOutlineSick id="souffrance"></MdOutlineSick></button>
       }
-      if(item.ponte!="false"){
+      if(item.ponte!=="false"){
         res_ponte = <button onClick={ () => handle_ponte(item.key) } ><GiFishEggs id="ponte"></GiFishEggs></button>
       }
   
@@ -119,11 +119,11 @@ const DatatablePage = () => {
 
       !isEmpty(items_filtre) && items_filtre.map(
         item => {
-            if(res_accouplement!=null && item.nom==="Accouplement" ||
-              res_souffrance!=null && item.nom==="Souffrance" ||
-              res_mort!=null && item.nom==="Mort" ||
-              res_peril!=null && item.nom==="En péril" ||
-              res_ponte!=null && item.nom==="Ponte" 
+            if((res_accouplement!=null && item.nom==="Accouplement") ||
+              (res_souffrance!=null && item.nom==="Souffrance") ||
+              (res_mort!=null && item.nom==="Mort") ||
+              (res_peril!=null && item.nom==="En péril")||
+              (res_ponte!=null && item.nom==="Ponte") 
             ){
               table_row.push(tab_item)
             }

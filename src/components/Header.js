@@ -21,14 +21,14 @@ const Header = () => {
     const id = event.target.id
 
       // vérification si la formation a deja été ajouté
-         !isEmpty(items_filtre) && id!="" && items_filtre.map( item => {
+         !isEmpty(items_filtre) && id!=="" && items_filtre.map( item => {
               if(item.id_button === id){
                   ajout=false;
               }
             }
         )
 
-    if(ajout && id!="" && nom!=""){
+    if(ajout && id!=="" && nom!==""){
       const data = { 
             "nom": nom,
             "id_button": id
@@ -42,8 +42,7 @@ const Header = () => {
   }
 
     return (   
-    <div className='header'>
-
+    <div className='header d-flex justify-content-center my-5'>
       <div className='list_bouton'>
         <Button variant="success" id="1" name="Ponte" onClick={ (event) => reply_click(event) }><GiFishEggs className='icon'></GiFishEggs>   Ponte</Button>{' '}
         <Button variant="warning" id="2" name="Accouplement" onClick={(event) => reply_click(event)}><GiDoubleFish className='icon'></GiDoubleFish>  Accouplement</Button>{' '}

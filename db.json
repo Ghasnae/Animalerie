@@ -1,9 +1,24 @@
 {
   "listFiltre": [
     {
+      "nom": "Mort",
+      "id_button": "5",
+      "id": 1
+    },
+    {
       "nom": "Souffrance",
       "id_button": "6",
-      "id": 1
+      "id": 2
+    },
+    {
+      "nom": "Accouplement",
+      "id_button": "2",
+      "id": 3
+    },
+    {
+      "nom": "En péril",
+      "id_button": "3",
+      "id": 4
     }
   ]
 }
